@@ -1,0 +1,8 @@
+Dependencies:
+discord.js
+rss-parser
+jssoup
+request
+request-promise
+
+
