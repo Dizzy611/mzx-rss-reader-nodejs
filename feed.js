@@ -95,9 +95,9 @@ class VaultFeed extends Feed {
 		}
 		let header = "";
 		if (this.approved) {
-			header = "**New on DigitalMZX** ";
+			header = "**New on DigitalMZX**: ";
 		} else {
-			header = "**For Approval** ";
+			header = "**For Approval**: ";
 		}
 		let retVal = header + title + " by ***" + author + "*** " + link;
 		return(retVal);
