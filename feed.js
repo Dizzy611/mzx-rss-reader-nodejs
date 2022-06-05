@@ -59,6 +59,9 @@ class Feed {
 		this.queue = [];
 		this.seen = new SeenData(seenfile);
 	}
+	clear_queue() {
+		this.queue = [];
+	}
 }
 
 class VaultFeed extends Feed {
@@ -92,9 +95,9 @@ class VaultFeed extends Feed {
 		}
 		let header = "";
 		if (this.approved) {
-			header = "**New on DigitalMZX**";
+			header = "**New on DigitalMZX** ";
 		} else {
-			header = "**For Approval**";
+			header = "**For Approval** ";
 		}
 		let retVal = header + title + " by ***" + author + "*** " + link;
 		return(retVal);
