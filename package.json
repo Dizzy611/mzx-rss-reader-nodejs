@@ -1,6 +1,6 @@
 {
   "name": "mzx-rss-reader-nodejs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "RSS Reader for MegaZeux",
   "main": "mzx_rss.js",
   "scripts": {
