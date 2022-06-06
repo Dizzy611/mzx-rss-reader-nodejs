@@ -6,3 +6,9 @@ request
 request-promise
 
 
+This is an RSS reader created for a very specific community, that being the MegaZeux community, and its Discord server. It's used to provide up to date notifications of forum posts, issue tracker posts, pending game releases, new game releases, and reviews. It's used both to inform the average visitor as well as to help keep the admins informed. 
+
+This is essentially the third or fourth version of this project. The initial project was done in Python, but I found the Python discord API to be unstable and hard to work with. Despite not being the biggest fan of javascript, I turned to node.js because I knew its Discord API was well liked among the Discord bot making community.
+
+The second iteration was an abortive attempt at a node version which had some major issues. The third version was similar to this one, but very ugly and full of even more hard coding, and was not class based. This version is relatively reusable and class-based, though there is still some hard-coding to be found in the message templating. Given the small scope of the project's use, I did not think it prudent to spend a great deal of time creating some sort of template engine for the output messages, so I left them as part of the "format" methods in feed.js. Sosumi.
+
