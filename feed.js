@@ -102,15 +102,7 @@ class VaultFeed extends Feed {
 		let retVal = header + title + " by ***" + author + "*** " + link;
 		return(retVal);
 	}
-
-	format(title, link, isReview) {
-		if (isReview) {
-			return this.format_review(title, link);
-		} else {
-			return this.format_release(title, link);
-		}
-	}
-
+	
 	async check() {
 		let today = new Date();
 		let feed = await parser.parseURL(this.url);
@@ -122,9 +114,9 @@ class VaultFeed extends Feed {
 				let seen = await this.seen.check(seenToken);
 				if (!seen) {
 					if (item.link.includes("review")) {
-						this.queue.push(this.format(item.title, item.link, true));
+						this.queue.push(this.format_review(item.title, item.link));
 					} else {
-						this.queue.push(this.format(item.title, item.link, false));
+						this.queue.push(this.format_release(item.title, item.link));
 					}
 					await this.seen.add(seenToken);
 				}
