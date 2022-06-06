@@ -12,7 +12,7 @@ config_feeds = [
 		  "flag": true },
 
 		{ "type": "vault",
-		  "url": "https://foo/adminRss.xml",
+		  "url": "https://foo/adminfeed.xml",
 		  "channels": ["bim"],
 		  "max_age": 365,
 		  "seen_file": "./admin_seen.dat",
